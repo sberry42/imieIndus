@@ -35,8 +35,8 @@ public class Jeu
         this.otherPlayer = otherPlayer;
     }
     
-    public Joueur getOtherPlayer()
+    public String getOtherPlayer()
     {
-        return this.otherPlayer;
+        return this.otherPlayer.getName();
     }
 }
