@@ -71,15 +71,23 @@ public class Jeu
                 joueur.setScore(40);
                 break;
             case 40 :
-                if((joueur1.getScore()==40 && joueur2.getScore()==40)&& joueur.getAvantage()== Boolean.FALSE){
-                    joueur1.setAvantage(Boolean.FALSE);
-                    joueur2.setAvantage(Boolean.FALSE);
-                    joueur.setAvantage(Boolean.TRUE);
-                }
-                else{
+            	if (joueur1.getScore()==40 && joueur2.getScore()==40) {
+            		if(joueur1.getAvantage()== Boolean.FALSE && joueur2.getAvantage()== Boolean.FALSE){
+                        joueur.setAvantage(Boolean.TRUE);
+                    }else{
+                    	if(joueur.getAvantage()){
+                            joueur.setSet(1);
+                            joueur1.setAvantage(Boolean.FALSE);
+                            joueur2.setAvantage(Boolean.FALSE);
+                            joueur1.setScore(0);
+                            joueur2.setScore(0);
+                    	}else{
+	                        joueur1.setAvantage(Boolean.FALSE);
+	                        joueur2.setAvantage(Boolean.FALSE);
+                    	}
+                    }
+            	} else {
                     joueur.setSet(1);
-                    joueur1.setAvantage(Boolean.FALSE);
-                    joueur2.setAvantage(Boolean.FALSE);
                     joueur1.setScore(0);
                     joueur2.setScore(0);
                 }
