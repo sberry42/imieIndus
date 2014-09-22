@@ -34,4 +34,14 @@ public class TennisTest
         jeu.setOtherPlayer(joueur2);
         Assert.assertEquals("Joueur 2", jeu.getOtherPlayer());
     }
+    
+    @Test
+    public void testPointsJoueurs()
+    {
+        Jeu jeu = new Jeu();
+        Joueur joueur1 = new Joueur("first");
+        Joueur joueur2 = new Joueur("second");
+        Assert.assertEquals(0,joueur1.getScore());
+        Assert.assertEquals(0,joueur2.getScore());
+    }
 }
