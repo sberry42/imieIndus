@@ -43,6 +43,8 @@ public class TennisTest
         Joueur joueur2 = new Joueur("second");
         jeu.setJoueur1(joueur1);
         jeu.setJoueur2(joueur2);
+        joueur1.setJeu(jeu);
+        joueur2.setJeu(jeu);
         Assert.assertEquals(joueur1,jeu.getJoueur1());
         Assert.assertEquals(joueur2,jeu.getJoueur2());
     }
@@ -55,6 +57,8 @@ public class TennisTest
         Joueur joueur2 = new Joueur("second");
         jeu.setJoueur1(joueur1);
         jeu.setJoueur2(joueur2);
+        joueur1.setJeu(jeu);
+        joueur2.setJeu(jeu);
         Assert.assertEquals(new Integer(0),joueur1.getScore());
         Assert.assertEquals(new Integer(0),joueur2.getScore());
     }
@@ -67,6 +71,8 @@ public class TennisTest
         Joueur joueur2 = new Joueur("second");
         jeu.setJoueur1(joueur1);
         jeu.setJoueur2(joueur2);
+        joueur1.setJeu(jeu);
+        joueur2.setJeu(jeu);
         
         Assert.assertEquals(new Integer(0),joueur1.getScore());
         Assert.assertEquals(new Integer(0),joueur2.getScore());
@@ -86,6 +92,8 @@ public class TennisTest
         Joueur joueur2 = new Joueur("second");
         jeu.setJoueur1(joueur1);
         jeu.setJoueur2(joueur2);
+        joueur1.setJeu(jeu);
+        joueur2.setJeu(jeu);
         
         joueur1.marque();
         joueur2.marque();
@@ -105,6 +113,8 @@ public class TennisTest
         Joueur joueur2 = new Joueur("second");
         jeu.setJoueur1(joueur1);
         jeu.setJoueur2(joueur2);
+        joueur1.setJeu(jeu);
+        joueur2.setJeu(jeu);
       
         joueur1.marque();
         joueur2.marque();
@@ -127,6 +137,8 @@ public class TennisTest
         Joueur joueur2 = new Joueur("second");
         jeu.setJoueur1(joueur1);
         jeu.setJoueur2(joueur2);
+        joueur1.setJeu(jeu);
+        joueur2.setJeu(jeu);
         
         joueur1.marque();
         joueur2.marque();
@@ -150,6 +162,8 @@ public class TennisTest
         Joueur joueur2 = new Joueur("second");
         jeu.setJoueur1(joueur1);
         jeu.setJoueur2(joueur2);
+        joueur1.setJeu(jeu);
+        joueur2.setJeu(jeu);
       
         joueur1.marque();
         joueur2.marque();
