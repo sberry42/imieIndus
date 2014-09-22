@@ -141,4 +141,28 @@ public class TennisTest
         Assert.assertEquals(new Integer(0),joueur2.getSet());
         
     }
+    
+    @Test
+    public void testAvantagePerdu()
+    {
+        Jeu jeu = new Jeu();
+        Joueur joueur1 = new Joueur("first");
+        Joueur joueur2 = new Joueur("second");
+        jeu.setJoueur1(joueur1);
+        jeu.setJoueur2(joueur2);
+      
+        joueur1.marque();
+        joueur2.marque();
+        joueur1.marque();
+        joueur2.marque();
+        joueur1.marque();
+        joueur2.marque();
+        joueur1.marque();
+        joueur2.marque();
+
+        Assert.assertEquals(false,joueur1.getAvantage());
+        Assert.assertEquals(false,joueur2.getAvantage());
+        
+    }
+    
 }
