@@ -36,6 +36,18 @@ public class TennisTest
     }
     
     @Test
+    public void testAjoutJoueursJeu()
+    {
+        Jeu jeu = new Jeu();
+        Joueur joueur1 = new Joueur("first");
+        Joueur joueur2 = new Joueur("second");
+        jeu.setJoueur1(joueur1);
+        jeu.setJoueur2(joueur2);
+        Assert.assertEquals(joueur1,jeu.getJoueur1());
+        Assert.assertEquals(joueur2,jeu.getJoueur2());
+    }
+    
+    @Test
     public void testPointsJoueurs()
     {
         Jeu jeu = new Jeu();
@@ -55,8 +67,6 @@ public class TennisTest
         Joueur joueur2 = new Joueur("second");
         jeu.setJoueur1(joueur1);
         jeu.setJoueur2(joueur2);
-        Assert.assertEquals(joueur1,jeu.getJoueur1());
-        Assert.assertEquals(joueur2,jeu.getJoueur2());
         
         Assert.assertEquals(new Integer(0),joueur1.getScore());
         Assert.assertEquals(new Integer(0),joueur2.getScore());
@@ -76,11 +86,7 @@ public class TennisTest
         Joueur joueur2 = new Joueur("second");
         jeu.setJoueur1(joueur1);
         jeu.setJoueur2(joueur2);
-        Assert.assertEquals(joueur1,jeu.getJoueur1());
-        Assert.assertEquals(joueur2,jeu.getJoueur2());
         
-        Assert.assertEquals(new Integer(0),joueur1.getScore());
-        Assert.assertEquals(new Integer(0),joueur2.getScore());
         joueur1.marque();
         joueur2.marque();
         joueur1.marque();
@@ -99,23 +105,64 @@ public class TennisTest
         Joueur joueur2 = new Joueur("second");
         jeu.setJoueur1(joueur1);
         jeu.setJoueur2(joueur2);
-        Assert.assertEquals(joueur1,jeu.getJoueur1());
-        Assert.assertEquals(joueur2,jeu.getJoueur2());
-        
-        Assert.assertEquals(new Integer(0),joueur1.getScore());
-        Assert.assertEquals(new Integer(0),joueur2.getScore());
+      
         joueur1.marque();
         joueur2.marque();
         joueur1.marque();
         joueur2.marque();
         joueur1.marque();
         joueur2.marque();
-        Assert.assertEquals(new Integer(40),joueur1.getScore());
-        Assert.assertEquals(new Integer(40),joueur2.getScore());
         joueur1.marque();
 
         Assert.assertEquals(true,joueur1.getAvantage());
         Assert.assertEquals(false,joueur2.getAvantage());
         
     }
+    
+    @Test
+    public void testVictoire()
+    {
+        Jeu jeu = new Jeu();
+        Joueur joueur1 = new Joueur("first");
+        Joueur joueur2 = new Joueur("second");
+        jeu.setJoueur1(joueur1);
+        jeu.setJoueur2(joueur2);
+        
+        joueur1.marque();
+        joueur2.marque();
+        joueur1.marque();
+        joueur2.marque();
+        joueur1.marque();
+        joueur2.marque();
+        joueur1.marque();
+        joueur1.marque();
+
+        Assert.assertEquals(new Integer(1),joueur1.getSet());
+        Assert.assertEquals(new Integer(0),joueur2.getSet());
+        
+    }
+    
+    @Test
+    public void testAvantagePerdu()
+    {
+        Jeu jeu = new Jeu();
+        Joueur joueur1 = new Joueur("first");
+        Joueur joueur2 = new Joueur("second");
+        jeu.setJoueur1(joueur1);
+        jeu.setJoueur2(joueur2);
+      
+        joueur1.marque();
+        joueur2.marque();
+        joueur1.marque();
+        joueur2.marque();
+        joueur1.marque();
+        joueur2.marque();
+        joueur1.marque();
+        joueur2.marque();
+
+        Assert.assertEquals(false,joueur1.getAvantage());
+        Assert.assertEquals(false,joueur2.getAvantage());
+        
+    }
+    
 }
