@@ -12,7 +12,7 @@ package tennis;
  */
 public class Jeu
 {
-    private String service;
+    private Joueur service;
     
     public String score()
     {
@@ -21,10 +21,10 @@ public class Jeu
 
     public String getService()
     {
-        return this.service;
+        return this.service.getName();
     }
     
-    public void setService(String service)
+    public void setService(Joueur service)
     {
         this.service = service;
     }

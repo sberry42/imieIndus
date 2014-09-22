@@ -1,30 +1,28 @@
 package tennis;
 
 import org.junit.Assert;
+import org.junit.Test;
 
 /**
  *
  * @author imie
  */
-class TennisTest
+public class TennisTest
 {
-    /*
-    * @Test 
-    */
+    @Test 
     public void testInitialisationNouveauJeu()
     {
         new Jeu();
     }
-    
-    /*
-    * @Test 
-    */
+ 
+    @Test
     public void testAfficherScoreDebutDePartie()
     {
         Jeu jeu = new Jeu();
         Assert.assertEquals("0-0",jeu.score());
     }
-
+    
+    @Test
     public void testJoueur1Sert()
     {
         Jeu jeu = new Jeu();
