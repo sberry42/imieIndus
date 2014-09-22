@@ -44,4 +44,20 @@ public class TennisTest
         Assert.assertEquals(0,joueur1.getScore());
         Assert.assertEquals(0,joueur2.getScore());
     }
+    
+    @Test
+    public void testSeqMarquePoints()
+    {
+        Jeu jeu = new Jeu();
+        Joueur joueur1 = new Joueur("first");
+        Joueur joueur2 = new Joueur("second");
+        Assert.assertEquals(0,joueur1.getScore());
+        Assert.assertEquals(0,joueur2.getScore());
+        joueur1.marque();
+        Assert.assertEquals(15,joueur1.getScore());
+        joueur1.marque();
+        Assert.assertEquals(30,joueur1.getScore());
+        joueur1.marque();
+        Assert.assertEquals(40,joueur1.getScore());
+    }
 }
