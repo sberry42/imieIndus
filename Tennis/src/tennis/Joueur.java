@@ -3,7 +3,7 @@ package tennis;
 public class Joueur {
 	
 	private String name;
-	
+	private Integer score=0;
 
 	public Joueur(String name) {
 		super();
@@ -18,4 +18,11 @@ public class Joueur {
 		this.name = name;
 	}
 
+        public Integer getScore() {
+            return score;
+        }
+
+        public void setScore(Integer score) {
+            this.score = score;
+        }
 }

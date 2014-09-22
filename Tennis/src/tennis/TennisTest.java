@@ -41,7 +41,7 @@ public class TennisTest
         Jeu jeu = new Jeu();
         Joueur joueur1 = new Joueur("first");
         Joueur joueur2 = new Joueur("second");
-        Assert.assertEquals(0,joueur1.getScore());
-        Assert.assertEquals(0,joueur2.getScore());
+        Assert.assertEquals(new Integer(0),joueur1.getScore());
+        Assert.assertEquals(new Integer(0),joueur2.getScore());
     }
 }
