@@ -5,23 +5,36 @@ import java.util.Set;
 
 public class Joueur {
 	
-	private String name;
-	private Integer score   = 0;
-        private Integer set     = 0;
+    private String name;
+    private Integer score   = 0;
+    private Integer set     = 0;
+    private Boolean avantage = false;
+    private Jeu jeu;
 
-	public Joueur(String name) {
-		super();
-		this.name = name;
-	}
+ 
+    public Joueur(String name) {
+            super();
+            this.name = name;
+    }
+    
+    public String getName() {
+            return name;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public void setName(String name) {
+            this.name = name;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public Jeu getJeu() {
+        return jeu;
+    }
 
+    public void setJeu(Jeu jeu) {
+        this.jeu = jeu;
+    }
+
+    
+    
     public Integer getScore() {
         return score;
     }
@@ -29,24 +42,26 @@ public class Joueur {
     public void setScore(Integer score) {
         this.score = score;
     }
-    
-    public void marque()
-    {
-        switch(this.score)
-        {
-            case 0 :
-                this.score  = 15;
-                break;
-            case 15 :
-                this.score  = 30;
-                break;
-            case 30 :
-                this.score  = 40;
-                break;
-            case 40 :
-                this.score  = 0;
-                this.set    += 1;
-                break;
-        }
+
+    public void marque() {
+        jeu.marque(this);
+    }
+    public Integer getSet() {
+        return set;
+    }
+
+    public void setSet(Integer set) {
+        this.set = set;
+    }
+
+    public Boolean isAvantage() {
+        return avantage;
+    }
+
+    public void setAvantage(Boolean avantage) {
+        this.avantage = avantage;
+    }
+    public Boolean getAvantage() {
+        return this.avantage;
     }
 }
