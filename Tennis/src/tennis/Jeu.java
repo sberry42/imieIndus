@@ -11,5 +11,8 @@ package tennis;
  * @author imie
  */
 public class Jeu {
-    
+    public String score(){
+        return("0-0");
+    }
+
 }
