@@ -22,31 +22,31 @@ public class Joueur {
 		this.name = name;
 	}
 
-        public Integer getScore() {
-            return score;
-        }
+    public Integer getScore() {
+        return score;
+    }
 
-        public void setScore(Integer score) {
-            this.score = score;
-        }
-        
-        public void marque()
+    public void setScore(Integer score) {
+        this.score = score;
+    }
+    
+    public void marque()
+    {
+        switch(this.score)
         {
-            switch(this.score)
-            {
-                case 0 :
-                    this.score  = 15;
-                    break;
-                case 15 :
-                    this.score  = 30;
-                    break;
-                case 30 :
-                    this.score  = 40;
-                    break;
-                case 40 :
-                    this.score  = 0;
-                    this.set    += 1;
-                    break;
-            }
+            case 0 :
+                this.score  = 15;
+                break;
+            case 15 :
+                this.score  = 30;
+                break;
+            case 30 :
+                this.score  = 40;
+                break;
+            case 40 :
+                this.score  = 0;
+                this.set    += 1;
+                break;
         }
+    }
 }
