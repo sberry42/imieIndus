@@ -1,21 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package tennis;
+
+import org.junit.Assert;
 
 /**
  *
  * @author imie
  */
-class TennisTest 
+class TennisTest
 {
     /*
     * @Test 
     */
-    public void testInitialisationNouveauJeu() 
+    public void testInitialisationNouveauJeu()
     {
         new Jeu();
     }
@@ -23,7 +19,7 @@ class TennisTest
     /*
     * @Test 
     */
-    public void testAfficherScoreDebutDePartie() 
+    public void testAfficherScoreDebutDePartie()
     {
         Jeu jeu = new Jeu();
         Assert.assertEquals("0-0",jeu.score());
