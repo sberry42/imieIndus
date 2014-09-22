@@ -3,30 +3,36 @@ package tennis;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Joueur {
+public class Joueur 
+{
 	
-	private String name;
-	private Integer score   = 0;
+    private String name;
+    private Integer score   = 0;
     private Integer set     = 0;
 
-	public Joueur(String name) {
-		super();
-		this.name = name;
-	}
+    public Joueur(String name) 
+    {
+        super();
+        this.name = name;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public String getName() 
+    {
+        return name;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public void setName(String name) 
+    {
+        this.name = name;
+    }
 
-    public Integer getScore() {
+    public Integer getScore() 
+    {
         return score;
     }
 
-    public void setScore(Integer score) {
+    public void setScore(Integer score) 
+    {
         this.score = score;
     }
     
