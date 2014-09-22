@@ -29,6 +29,7 @@ class TennisTest
     {
         Jeu jeu = new Jeu();
         Assert.assertEquals("0-0",jeu.score());
-        Assert.assertEquals("Joueur 1", jeu.service());
+        jeu.setService("Joueur 1");
+        Assert.assertEquals("Joueur 1", jeu.getService());
     }
 }
