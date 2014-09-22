@@ -7,7 +7,7 @@ public class Joueur {
 	
 	private String name;
 	private Integer score   = 0;
-        private Integer set     = 0;
+    private Integer set     = 0;
 
 	public Joueur(String name) {
 		super();
