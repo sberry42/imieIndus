@@ -1,0 +1,19 @@
+<<<<<<< HEAD
+/Tennis/nbproject/private/
+=======
+/Tennis/nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+
+# Class Files #
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+>>>>>>> b4ab2364656f4b4d3b2ee51295d2fce0e8924d98

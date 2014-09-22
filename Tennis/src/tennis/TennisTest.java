@@ -10,15 +10,13 @@ package tennis;
  *
  * @author imie
  */
-public class Tennis {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+class TennisTest 
+{
+    /*
+    * @Test 
+    */
+    public void testInitialisationNouveauJeu() 
+    {
+	new Jeu();
     }
-    
-    
-    
 }
