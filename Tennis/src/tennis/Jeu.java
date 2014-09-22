@@ -61,4 +61,33 @@ public class Jeu
     {
         return this.otherPlayer.getName();
     }
+    
+    public void marque(Joueur joueur){
+        switch(joueur.getScore())
+        {
+            case 0 :
+                joueur.setScore(15);
+                break;
+            case 15 :
+                joueur.setScore(30);
+                break;
+            case 30 :
+                joueur.setScore(40);
+                break;
+            case 40 :
+                if((joueur1.getScore()==40 && joueur2.getScore()==40)&& joueur.getAvantage()== Boolean.FALSE){
+                    joueur1.setAvantage(Boolean.FALSE);
+                    joueur2.setAvantage(Boolean.FALSE);
+                    joueur.setAvantage(Boolean.TRUE);
+                }
+                else{
+                    joueur.setSet(1);
+                    joueur1.setAvantage(Boolean.FALSE);
+                    joueur2.setAvantage(Boolean.FALSE);
+                    joueur1.setScore(0);
+                    joueur2.setScore(0);
+                }
+                break;
+        }
+    }
 }
