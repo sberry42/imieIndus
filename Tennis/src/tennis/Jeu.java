@@ -13,6 +13,7 @@ package tennis;
 public class Jeu
 {
     private Joueur service;
+    private Joueur otherPlayer;
     
     public String score()
     {
@@ -27,5 +28,15 @@ public class Jeu
     public void setService(Joueur service)
     {
         this.service = service;
+    }
+    
+    public void setOtherPlayer(Joueur otherPlayer)
+    {
+        this.otherPlayer = otherPlayer;
+    }
+    
+    public Joueur getOtherPlayer()
+    {
+        return this.otherPlayer;
     }
 }
