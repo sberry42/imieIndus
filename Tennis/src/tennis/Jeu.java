@@ -9,13 +9,27 @@ import java.util.Objects;
  */
 public class Jeu implements Serializable
 {
-    private Joueur service;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 3548873499524170584L;
+	private Joueur service;
     private Joueur otherPlayer;
     private Joueur joueur1;
     private Joueur joueur2;
-    private Serializer seri;
+    private transient Serializer seri;
     
-    public Joueur getJoueur1() 
+    
+    
+    public Serializer getSeri() {
+		return seri;
+	}
+
+	public void setSeri(Serializer seri) {
+		this.seri = seri;
+	}
+
+	public Joueur getJoueur1() 
     {
 	return joueur1;
     }

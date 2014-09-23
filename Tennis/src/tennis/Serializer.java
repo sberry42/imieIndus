@@ -19,6 +19,7 @@ public class Serializer implements ISerializer {
 			oos = new ObjectOutputStream(fichier);
 			oos.writeObject(jeux);
 			oos.flush();
+			oos.close();
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
@@ -37,6 +38,7 @@ public class Serializer implements ISerializer {
 			fichier = new FileInputStream("jeux.ser");
 			ois = new ObjectInputStream(fichier);
 			retour = (Jeu) ois.readObject();
+			ois.close();
 		} catch (IOException | ClassNotFoundException e) {
 			throw new RuntimeException(e);
 		}

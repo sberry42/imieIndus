@@ -4,7 +4,11 @@ import java.io.Serializable;
 
 public class Joueur implements Serializable {
 	
-    private String name;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -8714478702267561682L;
+	private String name;
     private Integer score   = 0;
     private Integer set     = 0;
     private Boolean avantage = false;
