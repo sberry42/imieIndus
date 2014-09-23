@@ -1,6 +1,8 @@
 package tennis;
 
-public class Joueur {
+import java.io.Serializable;
+
+public class Joueur implements Serializable {
 	
     private String name;
     private Integer score   = 0;

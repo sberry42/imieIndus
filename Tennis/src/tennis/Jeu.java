@@ -1,12 +1,13 @@
 package tennis;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
  *
  * @author imie
  */
-public class Jeu
+public class Jeu implements Serializable
 {
     private Joueur service;
     private Joueur otherPlayer;
