@@ -13,6 +13,7 @@ public class Jeu implements Serializable
     private Joueur otherPlayer;
     private Joueur joueur1;
     private Joueur joueur2;
+    private Serializer seri;
     
     public Joueur getJoueur1() 
     {
@@ -95,4 +96,14 @@ public class Jeu implements Serializable
                 break;
         }
     }
+    
+    
+    public void save() {
+    	seri.persist(this);
+	}
+
+	public void reset() {
+
+	}
+    
 }
