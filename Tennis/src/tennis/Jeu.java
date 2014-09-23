@@ -1,5 +1,7 @@
 package tennis;
 
+import java.util.Objects;
+
 /**
  *
  * @author imie
@@ -70,7 +72,7 @@ public class Jeu
                 break;
             case 40 :
             	if (joueur1.getScore()==40 && joueur2.getScore()==40) {
-            		if(joueur1.getAvantage()== Boolean.FALSE && joueur2.getAvantage()== Boolean.FALSE){
+            		if( Objects.equals(joueur1.getAvantage(), Boolean.FALSE) && Objects.equals(joueur2.getAvantage(), Boolean.FALSE)){
                         joueur.setAvantage(Boolean.TRUE);
                     }else{
                     	if(joueur.getAvantage()){
