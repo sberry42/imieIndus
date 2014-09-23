@@ -1,4 +1,4 @@
-package tennis_test;
+package org.tennisTest;
 
 import org.junit.Assert;
 import org.junit.Test;
