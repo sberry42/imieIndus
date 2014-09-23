@@ -5,8 +5,8 @@ import java.util.Set;
 
 public class Joueur {
 	
-	private String name;
-	private Integer score   = 0;
+    private String name;
+    private Integer score   = 0;
     private Integer set     = 0;
     private Boolean avantage = false;
     private Jeu jeu;
@@ -32,8 +32,6 @@ public class Joueur {
     public void setJeu(Jeu jeu) {
         this.jeu = jeu;
     }
-
-    
     
     public Integer getScore() {
         return score;

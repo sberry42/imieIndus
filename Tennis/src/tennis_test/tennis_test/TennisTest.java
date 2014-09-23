@@ -1,7 +1,9 @@
-package tennis;
+package tennis_test;
 
 import org.junit.Assert;
 import org.junit.Test;
+import tennis.*;
+
 
 /**
  *
@@ -9,10 +11,15 @@ import org.junit.Test;
  */
 public class TennisTest
 {
+    public static void main(String[] args) 
+    {
+        // TODO code application logic here
+    }
+    
     @Test 
     public void testInitialisationNouveauJeu()
     {
-        new Jeu();
+        Jeu jeu = new Jeu();
     }
  
     @Test
