@@ -1,4 +1,4 @@
-package Tennis;
+package tennis;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
