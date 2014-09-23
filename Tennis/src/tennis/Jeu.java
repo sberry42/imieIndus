@@ -19,9 +19,16 @@ public class Jeu implements Serializable
     private Joueur joueur2;
     private transient Serializer seri;
     
+    public Jeu() {
+		super();
+	}
     
-    
-    public Serializer getSeri() {
+    public Jeu(Serializer seri) {
+		super();
+		this.seri = seri;
+	}
+
+	public Serializer getSeri() {
 		return seri;
 	}
 
