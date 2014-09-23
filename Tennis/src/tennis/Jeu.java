@@ -103,7 +103,15 @@ public class Jeu implements Serializable
 	}
 
 	public void reset() {
-
+		this.setJoueur1(null);
+		this.setJoueur2(null);
+		this.setOtherPlayer(null);
+		this.setService(null);
 	}
     
+	public void load() {
+    	Jeu loadedGame = seri.read();
+    	this.setJoueur1(loadedGame.getJoueur1());
+    	this.setJoueur2(loadedGame.getJoueur1());
+	}
 }
