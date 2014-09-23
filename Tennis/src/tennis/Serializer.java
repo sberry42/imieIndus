@@ -6,17 +6,12 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
-import javax.enterprise.context.SessionScoped;
-import javax.enterprise.inject.Default;
-import javax.inject.Named;
-
-@Named("serialiser")
-public class Serialiser implements ISerialiser {
+public class Serializer implements ISerializer {
 	/* (non-Javadoc)
 	 * @see org.imie.testTDDTennis.ISerialiser#persist(org.imie.testTDDTennis.Jeux)
 	 */
 	@Override
-	public void persist(Jeux jeux)  {
+	public void persist(Jeu jeux)  {
 		ObjectOutputStream oos = null;
 		FileOutputStream fichier;
 		try {
@@ -34,14 +29,14 @@ public class Serialiser implements ISerialiser {
 	 * @see org.imie.testTDDTennis.ISerialiser#read()
 	 */
 	@Override
-	public Jeux read()  {
+	public Jeu read()  {
 		ObjectInputStream ois = null;
 		FileInputStream fichier;
-		Jeux retour;
+		Jeu retour;
 		try {
 			fichier = new FileInputStream("jeux.ser");
 			ois = new ObjectInputStream(fichier);
-			retour = (Jeux) ois.readObject();
+			retour = (Jeu) ois.readObject();
 		} catch (IOException | ClassNotFoundException e) {
 			throw new RuntimeException(e);
 		}
