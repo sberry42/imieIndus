@@ -32,8 +32,6 @@ public class Joueur {
     public void setJeu(Jeu jeu) {
         this.jeu = jeu;
     }
-
-    
     
     public Integer getScore() {
         return score;
@@ -42,26 +40,24 @@ public class Joueur {
     public void setScore(Integer score) {
         this.score = score;
     }
-
-    public void marque() {
-        jeu.marque(this);
-    }
-    public Integer getSet() {
-        return set;
-    }
-
-    public void setSet(Integer set) {
-        this.set = set;
-    }
-
-    public Boolean isAvantage() {
-        return avantage;
-    }
-
-    public void setAvantage(Boolean avantage) {
-        this.avantage = avantage;
-    }
-    public Boolean getAvantage() {
-        return this.avantage;
+    
+    public void marque()
+    {
+        switch(this.score)
+        {
+            case 0 :
+                this.score  = 15;
+                break;
+            case 15 :
+                this.score  = 30;
+                break;
+            case 30 :
+                this.score  = 40;
+                break;
+            case 40 :
+                this.score  = 0;
+                this.set    += 1;
+                break;
+        }
     }
 }

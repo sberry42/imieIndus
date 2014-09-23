@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package tennis;
 
 /**
@@ -17,21 +11,25 @@ public class Jeu
     private Joueur joueur1;
     private Joueur joueur2;
     
-    public Joueur getJoueur1() {
-		return joueur1;
-	}
+    public Joueur getJoueur1() 
+    {
+	return joueur1;
+    }
 
-	public void setJoueur1(Joueur joueur1) {
-		this.joueur1 = joueur1;
-	}
+    public void setJoueur1(Joueur joueur1) 
+    {
+        this.joueur1 = joueur1;
+    }
 
-	public Joueur getJoueur2() {
-		return joueur2;
-	}
+    public Joueur getJoueur2() 
+    {
+        return joueur2;
+    }
 
-	public void setJoueur2(Joueur joueur2) {
-		this.joueur2 = joueur2;
-	}
+    public void setJoueur2(Joueur joueur2) 
+    {
+        this.joueur2 = joueur2;
+    }
 
 	public String score()
     {
@@ -71,15 +69,23 @@ public class Jeu
                 joueur.setScore(40);
                 break;
             case 40 :
-                if((joueur1.getScore()==40 && joueur2.getScore()==40)&& joueur.getAvantage()== Boolean.FALSE){
-                    joueur1.setAvantage(Boolean.FALSE);
-                    joueur2.setAvantage(Boolean.FALSE);
-                    joueur.setAvantage(Boolean.TRUE);
-                }
-                else{
+            	if (joueur1.getScore()==40 && joueur2.getScore()==40) {
+            		if(joueur1.getAvantage()== Boolean.FALSE && joueur2.getAvantage()== Boolean.FALSE){
+                        joueur.setAvantage(Boolean.TRUE);
+                    }else{
+                    	if(joueur.getAvantage()){
+                            joueur.setSet(1);
+                            joueur1.setAvantage(Boolean.FALSE);
+                            joueur2.setAvantage(Boolean.FALSE);
+                            joueur1.setScore(0);
+                            joueur2.setScore(0);
+                    	}else{
+	                        joueur1.setAvantage(Boolean.FALSE);
+	                        joueur2.setAvantage(Boolean.FALSE);
+                    	}
+                    }
+            	} else {
                     joueur.setSet(1);
-                    joueur1.setAvantage(Boolean.FALSE);
-                    joueur2.setAvantage(Boolean.FALSE);
                     joueur1.setScore(0);
                     joueur2.setScore(0);
                 }
