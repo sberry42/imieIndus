@@ -57,4 +57,5 @@ local.properties
 ######################
 # Gradle
 ######################
+*/gradle.properties
 
