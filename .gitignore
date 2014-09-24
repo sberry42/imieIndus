@@ -53,3 +53,9 @@ local.properties
  
 # PDT-specific
 .buildpath
+
+######################
+# Gradle
+######################
+gradle.properties
+
