@@ -1,4 +1,12 @@
-apply plugin:'java'
+apply plugin: 'java'
+apply plugin: 'eclipse'
 repositories {
 mavenCentral()
 }
+
+compileTestJava.onlyIf{
+!project.hasProperty('skipTests')}
+test.onlyIf{
+!project.hasProperty('skipTests')}
+
+
