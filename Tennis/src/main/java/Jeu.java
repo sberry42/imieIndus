@@ -1,4 +1,4 @@
-package tennis;
+package main.java;
 
 import java.io.Serializable;
 import java.util.Objects;

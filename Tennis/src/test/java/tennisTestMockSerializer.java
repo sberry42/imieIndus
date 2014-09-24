@@ -1,14 +1,14 @@
-package tennisTest;
+package test.java;
+
+import main.java.Jeu;
+import main.java.Joueur;
+import main.java.Serializer;
 
 import org.junit.Assert;
 import org.junit.Test;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.mockito.internal.matchers.Any;
-
-import tennis.Jeu;
-import tennis.Joueur;
-import tennis.Serializer;
 
 public class tennisTestMockSerializer {
 	

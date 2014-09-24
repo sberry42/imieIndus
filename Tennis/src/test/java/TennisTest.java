@@ -1,8 +1,9 @@
-package tennisTest;
+package test.java;
+
+import main.java.*;
 
 import org.junit.Assert;
 import org.junit.Test;
-import tennis.*;
 
 
 /**
