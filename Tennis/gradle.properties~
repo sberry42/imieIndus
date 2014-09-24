@@ -1,0 +1,8 @@
+systemProp.http.proxyHost=10.0.0.254
+systemProp.http.proxyPort=3128
+systemProp.http.proxyUser=sarah.cdpn02
+systemProp.http.proxyPassword=password
+systemProp.https.proxyHost=10.0.0.254
+systemProp.https.proxyPort=3128
+systemProp.https.proxyUser=sarah.cdpn02
+systemProp.https.proxyPassword=password

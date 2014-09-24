@@ -8,3 +8,9 @@ compileTestJava.onlyIf{
 !project.hasProperty('skipTests')}
 test.onlyIf{
 !project.hasProperty('skipTests')}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.+'
+}
+
+
