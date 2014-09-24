@@ -9,4 +9,9 @@ compileTestJava.onlyIf{
 test.onlyIf{
 !project.hasProperty('skipTests')}
 
+dependencies {
+    assert delegate == project.dependencies
+    compile('junit:junit:4.11')
+    delegate.compile('junit:junit:4.11')
+}
 
